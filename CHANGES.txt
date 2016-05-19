@@ -1,0 +1,17 @@
+0.1
+
+* Created helloworld blueprint.
+
+* Added setup.py.
+
+* Added versioning capabilities.
+
+* Root API returns service name and version.
+
+* Changed name application -> regad_stub.
+
+* root URL arbtirarily return package name and version.
+
+* Add native test runner.
+
+* Sphinx docs.
