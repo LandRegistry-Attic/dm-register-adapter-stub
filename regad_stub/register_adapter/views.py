@@ -17,9 +17,7 @@ def index():
     return 'OK'
 
 
-@register_adapter.route('/get-borrower-names', methods=["GET"])
-def get_borrower_names():
-    return json.dumps({'borrower_names':
-                      ['Arrietty Clock', 'Pod Clock', ' Homily Clock',
-                       'Hendreary Clock', 'Lupy Rain-Pipe Harpsichord Clock',
-                       'Eggletina Clock']})
+@register_adapter.route('/get-proprietor-names', methods=["GET"])
+def get_proprietor_names():
+    return json.dumps({'proprietor_names':
+                      ['John Smith', 'John Smith', 'Janet Smith']})

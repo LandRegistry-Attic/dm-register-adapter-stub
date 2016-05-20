@@ -13,10 +13,8 @@ class TestHelloWorld(unittest.TestCase):
         response = self.app.get('/register-adapter/')
         self.assertEquals(200, response.status_code)
 
-    def test_get_borrower_names(self):
-        response = self.app.get('/register-adapter/get-borrower-names')
-        expected = ['Arrietty Clock', 'Pod Clock', ' Homily Clock',
-                    'Hendreary Clock', 'Lupy Rain-Pipe Harpsichord Clock',
-                    'Eggletina Clock']
+    def test_get_proprietor_names(self):
+        response = self.app.get('/register-adapter/get-proprietor-names')
+        expected = ['John Smith', 'John Smith', 'Janet Smith']
         self.assertEquals(expected,
-                          json.loads(response.data)['borrower_names'])
+                          json.loads(response.data)['proprietor_names'])
