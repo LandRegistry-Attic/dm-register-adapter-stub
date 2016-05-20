@@ -30,7 +30,9 @@ def main():
                       default="0.0.0.0",
                       help="The host IP.")
     (options, args) = parser.parse_args()
-    regad_stub.app.run(debug=options.debug, host=options.host, port=int(options.port))
+    regad_stub.app.run(debug=options.debug,
+                       host=options.host,
+                       port=int(options.port))
 
 
 if __name__ == "__main__":

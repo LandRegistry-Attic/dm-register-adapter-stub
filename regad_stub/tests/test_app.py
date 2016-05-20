@@ -3,6 +3,7 @@ import unittest
 
 from regad_stub import app
 
+
 class TestHelloWorld(unittest.TestCase):
 
     def setUp(self):
@@ -17,4 +18,5 @@ class TestHelloWorld(unittest.TestCase):
         expected = ['Arrietty Clock', 'Pod Clock', ' Homily Clock',
                     'Hendreary Clock', 'Lupy Rain-Pipe Harpsichord Clock',
                     'Eggletina Clock']
-        self.assertEquals(expected, json.loads(response.data)['borrower_names'])
+        self.assertEquals(expected,
+                          json.loads(response.data)['borrower_names'])
