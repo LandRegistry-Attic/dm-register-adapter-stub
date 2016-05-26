@@ -8,7 +8,7 @@ from optparse import OptionParser
 import regad_stub
 
 
-def main():
+def main(*args, **kw):
     """
     Run the regad_stub server.
     """
