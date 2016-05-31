@@ -17,5 +17,9 @@ def index():
 
 @app.route('/get-proprietor-names/<title_number>', methods=["GET"])
 def get_proprietor_names(title_number):
-    return jsonify({'proprietor_names':
-                      ['John Smith', 'John Smith', 'Janet Smith']})
+    proprietor_names  = {'GR314108' : ["Ann Smith", "Ann Other"],
+	                 'GR515835' : ["Ann Smith"],
+	                 'GR517788' : ["Ann Marie-Jones Smith", "Belinda Blue"],
+                         'AV182773' : ["Lisa I'anson", "Ann Other"],
+                         'GR517730' : ["Liam Tremoille"]}.get(title_number, [])
+    return jsonify({'proprietor_names': proprietor_names})
