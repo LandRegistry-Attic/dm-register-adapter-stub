@@ -19,7 +19,7 @@ def index():
 def get_proprietor_names(title_number):
     proprietor_names  = {'GR314108' : ["Ann Smith", "Ann Other"],
 	                 'GR515835' : ["Ann Smith"],
-	                 'GR517788' : ["Ann Marie-Jones Smith", "Belinda Blue"],
+	                 'GR517788' : ["Ann Marie-Jones Smith", "Belinda Blue", "Charles John Morris Smith Jones"],
                          'AV182773' : ["Lisa I'anson", "Ann Other"],
                          'GR517730' : ["Liam Tremoille"]}.get(title_number, [])
     return jsonify({'proprietor_names': proprietor_names})
