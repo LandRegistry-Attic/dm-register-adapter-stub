@@ -60,6 +60,18 @@ class register_adapter_stub (
     ],
   }
 
+  service { $module_name:
+    ensure   => 'running',
+    enable   => true,
+    provider => 'systemd',
+    require  => [
+      Vcsrepo["${app_dir}"],
+      File["/opt/${module_name}/bin/run.sh"],
+      File["/etc/systemd/system/${module_name}.service"],
+      File["/var/run/${module_name}"],
+      Exec["${app_dir}/bin/app_requirements.sh"],
+    ],
+  }
 
   file { "/etc/nginx/conf.d/${module_name}.conf":
     ensure  => 'file',
