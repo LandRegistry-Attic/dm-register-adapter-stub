@@ -1,11 +1,9 @@
-============
-regad_stub
-============
+# regad_stub
 
 A Stub for  the Register Adapter.
 
-Running
--------
+## Running
+
 
 1. Setup the virtualenv::
 
