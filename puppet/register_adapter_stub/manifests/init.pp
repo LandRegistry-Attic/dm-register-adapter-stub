@@ -32,16 +32,6 @@ class register_adapter_stub (
     notify  => Service[$module_name],
   }
 
-  file { "${app_dir}/bin/app_requirements.sh":
-    ensure  => 'file',
-    mode    => '0755',
-    owner   => $owner,
-    group   => $group,
-    content => template("${module_name}/app_requirements.sh.erb"),
-    require => Vcsrepo["/opt/${module_name}"],
-    notify  => Service[$module_name],
-  }
-
   file { "/var/run/${module_name}":
     ensure => 'directory',
     owner  => $owner,
