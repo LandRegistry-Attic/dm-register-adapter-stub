@@ -22,6 +22,5 @@ def get_proprietor_names(title_number):
                         'GR517788': ["Ann Marie-Jones Smith", "Belinda Blue", "Charles John Morris Smith Jones"],
 
                         'AV182773': ["Lisa I'anson", "Ann Other"],
-                        'GR517730': ["Liam Tremoille"]}.get(title_number, ["Sara-Jane Jones Smith", "Linda Green",
-                                                                           "Chuck Jon Norris Green Brown"])
+                        'GR517730': ["Liam Tremoille"]}.get(title_number, ["Ann Smith"])
     return jsonify({'proprietor_names': proprietor_names})

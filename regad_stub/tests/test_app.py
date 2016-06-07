@@ -17,6 +17,6 @@ class TestHelloWorld(unittest.TestCase):
 
     def test_get_proprietor_names(self):
         response = self.app.get('/get-proprietor-names/dn100')
-        expected = ['Sara-Jane Jones Smith', 'Linda Green', 'Chuck Jon Norris Green Brown']
+        expected = ['Ann Smith']
         self.assertEquals(expected,
                           json.loads(response.data)['proprietor_names'])
