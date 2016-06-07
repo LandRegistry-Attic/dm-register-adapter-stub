@@ -3,7 +3,7 @@ class register_adapter_stub (
     $port = '5011',
     $host = '0.0.0.0',
     $source = 'https://github.com/LandRegistry/dm-register-adapter-stub',
-    $branch_or_revision = 'puppetise',
+    $branch_or_revision = 'develop',
     $subdomain = 'registeradapterstub',
     $domain = undef,
     $owner = 'vagrant',
