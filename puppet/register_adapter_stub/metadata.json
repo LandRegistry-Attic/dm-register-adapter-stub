@@ -1,0 +1,11 @@
+{
+  "name": "dm-register-adapter-stub",
+  "version": "0.0.1",
+  "author": "Land Registry Charges team",
+  "summary": "Install the DM Register Adapter Stub.",
+  "license": "MIT",
+  "source": "https://github.com/LandRegistry/dm-register-adapter-stub",
+  "project_page": "https://github.com/LandRegistry/dm-register-adapter-stub",
+  "issues_url": "https://github.com/LandRegistry/dm-register-adapter-stub",
+  "dependencies": [{"name": "puppetlabs/vcsrepo"}]
+}
