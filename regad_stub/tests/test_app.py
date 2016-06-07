@@ -1,5 +1,7 @@
-import json
+
 import unittest
+
+from flask import json
 
 from regad_stub import app
 
@@ -10,11 +12,11 @@ class TestHelloWorld(unittest.TestCase):
         self.app = app.test_client()
 
     def test_service(self):
-        response = self.app.get('/register-adapter/')
+        response = self.app.get('/')
         self.assertEquals(200, response.status_code)
 
     def test_get_proprietor_names(self):
-        response = self.app.get('/register-adapter/get-proprietor-names')
-        expected = ['John Smith', 'John Smith', 'Janet Smith']
+        response = self.app.get('/get-proprietor-names/dn100')
+        expected = ['Ann Smith']
         self.assertEquals(expected,
                           json.loads(response.data)['proprietor_names'])
