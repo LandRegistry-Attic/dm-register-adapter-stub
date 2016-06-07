@@ -68,8 +68,7 @@ class register_adapter_stub (
       Vcsrepo["${app_dir}"],
       File["/opt/${module_name}/bin/run.sh"],
       File["/etc/systemd/system/${module_name}.service"],
-      File["/var/run/${module_name}"],
-      Exec["${app_dir}/bin/app_requirements.sh"],
+      File["/var/run/${module_name}"]
     ],
   }
 
